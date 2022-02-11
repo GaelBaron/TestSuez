@@ -22,7 +22,11 @@
     overflow: hidden;
     max-height: 0;
     border-radius: 2px;
-    background-color: white;
+    background-color: #46B1BB;
+  }
+
+  .button {
+    background-color: #46B1BB;
   }
   
   .menu-deroulant:hover > .sous-menu {
@@ -69,7 +73,7 @@
     height: 60px;
     display: flex;
     align-items: center;
-    background-color: #1976d2;
+    background-color: #006FA9;
     color: white;
     font-weight: 600;
   }
