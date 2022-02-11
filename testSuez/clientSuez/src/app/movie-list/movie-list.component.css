@@ -1,0 +1,107 @@
+* {
+    margin: 0px;
+    padding: 0px;
+    font-family: Montserrat, sans-serif;
+  }
+
+  nav {
+    width: 100%;
+    font-size: 18px;
+    position: sticky;
+  }
+
+  nav > ul {
+    text-align: center;
+    box-shadow: 0px 1px 2px 1px rgba(0,0,0,0.3);
+  }
+
+  nav ul {
+    list-style-type: none;
+  }
+
+  nav > ul > li {
+    flex: 1;
+  }
+
+  nav > ul > li:hover > a{
+    color: #2169EC;
+  }
+
+  .menu-deroulant > a:after{
+    font-size: 15px;
+  }
+
+  .sous-menu {
+    width: 100%;
+    text-align: left;
+    overflow: hidden;
+    max-height: 0;
+    border-radius: 2px;
+    background-color: black;
+    position: sticky;
+  }
+
+  .menu-deroulant:hover > .sous-menu {
+    animation: apparitionSousMenu 1s forwards;
+  }
+
+  @keyframes apparitionSousMenu {
+    0% {
+      box-shadow: 0px 3px 3px 1px rgba(0,0,0,0);
+    }
+    30% {
+      box-shadow: 0px 3px 3px 1px rgba(0,0,0,0.3);
+    }
+    100% {
+      max-height: 50em;
+      box-shadow: 0px 3px 3px 1px rgba(0,0,0,0.3);
+    }
+  }
+
+  .empty {
+      height: 32px;
+      width: 300px;
+  }
+
+  .sous-menu > li > a {
+    align-items: center;
+    display: flex;
+    height: 50px;
+    padding-left: 200px;
+    width: 100%;
+    position: sticky;
+  }
+
+  .sous-menu > li:hover > a {
+    color: white;
+  }
+
+  .spacer {
+    flex: 1;
+  }
+
+  .toolbar {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    height: 60px;
+    display: flex;
+    align-items: center;
+    background-color: #1976d2;
+    color: white;
+    font-weight: 600;
+  }
+
+  .toolbar img {
+    margin: 0 16px;
+  }
+
+  .content {
+    display: flex;
+    margin: 82px auto 32px;
+    padding: 0 16px;
+    max-width: 960px;
+    flex-direction: column;
+    align-items: center;
+  }

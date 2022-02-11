@@ -1,0 +1,39 @@
+<link rel="stylesheet" href="./navbar.component.css">
+<!-- Contenu de la toolbar -->
+<div class="toolbar" role="banner">
+  <nav>
+    <a routerLink="">Gaël Baron</a>
+  </nav>
+    <div class="spacer"></div>
+    <nav>
+    <a routerLink="/movies">Movies</a>
+  </nav>
+  <ul>
+    <li class="menu-deroulant">
+      <img src="../../assets/liste.png" height="32px" width="32px">
+      <ul class="sous-menu">
+        <li><button type="button" (click)="switchToZero()">Profil</button></li>
+        <li><button type="button" (click)="switchToOne()">Ministère de l'Intérieur - Temps plein</button></li>
+        <li><button type="button" (click)="switchToTwo()">Ministère de l'Intérieur - Temps partiel</button></li>
+        <li><button type="button" (click)="switchToThree()">Addeco</button></li>
+      </ul>
+    </li>
+  </ul>
+  </div>
+
+<!--Affichage de l'élement sélecitonné parmis profile, part time, full time et intérim.
+L'utilisation d'un switch case aurait été plus appropriée, mais celui-ci ne rafraichissait pas les modules lors de l'appuis sur le bouton-->
+<div class="content" role="main">
+  <div *ngIf="switchSelect == 0">
+    <app-profile></app-profile>
+  </div>
+  <div *ngIf="switchSelect == 1">
+    <app-full-time-mi></app-full-time-mi>
+  </div>
+  <div *ngIf="switchSelect == 2">
+    <app-part-time-mi></app-part-time-mi>
+  </div>
+  <div *ngIf="switchSelect == 3">
+    <app-interim-addeco></app-interim-addeco>
+  </div>
+</div>
